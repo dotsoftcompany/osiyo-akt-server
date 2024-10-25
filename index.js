@@ -31,13 +31,13 @@ app.post("/add-teacher", async (req, res) => {
       phone: req.body.phone,
       address: req.body.address,
       position: req.body.position,
-      roles: req.body.role,
+      role: req.body.role,
       isTeacherUpdate: req.body.isTeacherUpdate,
     };
 
-    if (!email || !email.includes("@")) {
-      return res.status(400).json({ message: "Invalid email format." });
-    }
+    // if (!email || !email.includes("@")) {
+    //   return res.status(400).json({ message: "Invalid email format." });
+    // }
 
     const userResponse = await admin.auth().createUser({
       email: user.email,
