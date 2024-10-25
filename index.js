@@ -38,6 +38,7 @@ app.post("/add-teacher", async (req, res) => {
     // if (!email || !email.includes("@")) {
     //   return res.status(400).json({ message: "Invalid email format." });
     // }
+    
 
     const userResponse = await admin.auth().createUser({
       email: user.email,
